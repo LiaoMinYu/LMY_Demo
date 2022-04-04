@@ -1,0 +1,37 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    #password: 1234
+    password:
+    #url: jdbc:mysql://172.16.26.128:3307/demo?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://172.16.26.128:9030/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
+    druid:
+      max-active: 4
+      connection-init-sqls: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+server:
+  port: 8083
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+# 指定要扫描注解的包
+io.github.lvyahui8.spring.base-packages: io.github.lvyahui8.spring.example
+
+hof:
+  elsa:
+    enabled: true
+    env: dev
+    buffer: 1000
+
+rocketmq:
+  name-server: 192.168.1.3:9876
+  producer.group: my-group
