@@ -10,7 +10,8 @@ spring:
     #password: 1234
     password:
     #url: jdbc:mysql://172.16.26.128:3307/demo?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
-    url: jdbc:mysql://172.16.26.128:9030/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
+    #url: jdbc:mysql://172.16.26.128:9030/test_db?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://127.0.0.1:3306/nacos_config?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Hongkong&allowPublicKeyRetrieval=true
     druid:
       max-active: 4
       connection-init-sqls: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
