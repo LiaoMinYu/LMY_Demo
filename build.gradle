@@ -53,13 +53,15 @@ dependencies {
 //    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
-
+    implementation 'commons-dbutils:commons-dbutils:1.7'
+    implementation 'com.alibaba.otter:canal.client:1.1.4'
     annotationProcessor 'junit:junit:4.12'
     implementation 'com.baomidou:mybatis-plus-generator:3.3.2'
     implementation 'org.apache.rocketmq:rocketmq-spring-boot-starter:2.2.0'
     runtimeOnly 'mysql:mysql-connector-java'
     implementation "com.alibaba:druid-spring-boot-starter:1.1.10"
-    compile 'com.baomidou:mybatis-plus-boot-starter:3.3.2'
+    compile 'com.baomidou:mybatis-plus-boot-starter:3.5.0'
+   // compile group: 'com.baomidou', name: 'mybatis-plus', version: 'mybatis-plus-latest-version'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
