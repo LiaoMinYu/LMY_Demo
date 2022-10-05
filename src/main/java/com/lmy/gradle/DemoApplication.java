@@ -20,18 +20,18 @@ import java.util.List;
 @SpringBootApplication
 @MapperScan(value = "com.lmy.gradle")
 @EnableScheduling
-public class DemoApplication implements CommandLineRunner {
-//public class DemoApplication {
-        @Resource
+//public class DemoApplication implements CommandLineRunner {
+public class DemoApplication {
+       // @Resource
     CanalClient canalClient;
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        canalClient.run();
-    }
+//    @Override
+//    public void run(String... args) throws Exception {
+//        canalClient.run();
+//    }
 
 
 //    @Bean

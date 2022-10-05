@@ -1,6 +1,7 @@
 package com.lmy.gradle.controller;
 
 import com.lmy.gradle.HashMapDemo;
+import com.lmy.gradle.aop.CheckLogin;
 import com.lmy.gradle.entity.entity.User;
 import com.lmy.gradle.entity.entity.User2;
 import com.lmy.gradle.entity.entity.UserVO;
@@ -38,10 +39,10 @@ public class MysqlController {
         return Mono.just(mysqlService.savaManyTalbe2());
     }
 
-
+    @CheckLogin
     @GetMapping("detail")
-    public Mono<UserVO> detail(@RequestParam(value = "id") Long id){
-        User user = userMapper.selectById(id);
+    public Mono<UserVO> detail(@RequestParam(value = "ids") Long ids,User usesr){
+        User user = userMapper.selectById(ids);
 
         return Mono.just(UserVO.buildSaleOrderVO(user));
     }
